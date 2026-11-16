@@ -1,6 +1,6 @@
 // Configuração do site. Preencha depois de criar o produto na Hotmart e o pixel no Meta.
 window.SITE = {
-  pixelId: '',                                   // ID do pixel/conjunto de dados do Meta (só números)
+  pixelId: '1798472171083651',                                   // ID do pixel/conjunto de dados do Meta (só números)
   checkoutUrl: 'https://pay.hotmart.com/N108514533E?checkoutMode=10', // link de pagamento do produto principal na Hotmart
   supportEmail: 'soporte@fichasyguias.com',      // e-mail de suporte que aparece nas páginas
   price: 'US$ 7',
