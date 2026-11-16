@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kit Año Completo</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Andika:wght@400;700&family=Fredoka:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="config.js"></script>
+<style>
+  .ok { background: #e8f8f0; border-radius: 18px; padding: 14px 18px; font-family: var(--display); }
+  .widget { min-height: 80px; display: grid; gap: 12px; justify-items: center; }
+  .no { color: var(--muted); font-size: .95rem; }
+</style>
+</head>
+<body>
+
+<header class="wrap narrow stack" style="padding-top:28px">
+  <p class="ok">Tu compra está confirmada. El acceso al cuaderno ya va camino a tu correo.</p>
+  <span class="badge" style="justify-self:start">Oferta solo para quien acaba de comprar</span>
+  <h1>¿Y después de los 30 días?</h1>
+  <p class="lead" style="color:var(--muted)">Cuando termine el plan, tu peque ya lee palabras y frases cortas. El Kit Año Completo continúa desde ahí, con una ficha por día durante 40 semanas.</p>
+</header>
+
+<section>
+  <div class="wrap stack">
+    <div class="gallery">
+      <figure><img src="img/capa-anio.webp" width="600" height="777" alt="Portada del Kit Año Completo"><figcaption>245 páginas en PDF</figcaption></figure>
+      <figure><img src="img/anio-34.webp" width="600" height="776" alt="Ficha de la semana 6 con za, zo, zu"><figcaption>Sílabas difíciles: z, ce, ci, que, gue, h, y</figcaption></figure>
+      <figure><img src="img/anio-130.webp" width="600" height="776" alt="Ficha de sílabas trabadas con br"><figcaption>Trabadas: bl, br, cl, cr, tr...</figcaption></figure>
+      <figure><img src="img/anio-196.webp" width="600" height="776" alt="Lectura de la semana 33"><figcaption>Lecturas más largas con preguntas</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="band-peach">
+  <div class="wrap narrow stack">
+    <h2>Lo que trae el kit</h2>
+    <ul class="list">
+      <li>40 semanas, 6 fichas por semana: trazar, unir, separar en sílabas, leer palabras, copiar frases y dictado.</li>
+      <li>Semanas 1 a 4: repaso de lo aprendido en los 30 días.</li>
+      <li>Semanas 5 a 14: rr, z, ce, ci, que, qui, gue, gui, ge, gi, h, y, k, w, x.</li>
+      <li>Semanas 15 a 20: sílabas mixtas como sol, pan, árbol y reloj.</li>
+      <li>Semanas 21 a 32: todas las trabadas (bl, br, cl, cr, dr, fl, fr, gl, gr, pl, pr, tr).</li>
+      <li>Semanas 33 a 40: textos más largos, preguntas, copia y opinión.</li>
+      <li>Calendario de 40 semanas y diploma de gran lector.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap narrow">
+    <div class="offer" style="text-align:center;justify-items:center">
+      <p class="micro">Agrégalo a tu compra con un clic, sin volver a escribir los datos de la tarjeta</p>
+      <p class="price" data-upsell-price>US$ 12,90</p>
+      <div class="widget" id="hotmart-upsell">
+        <!-- HOTMART - Sales Funnel Widget (funil 292539: botões de aceitar e recusar) -->
+        <div id="hotmart-sales-funnel"></div>
+        <script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"></script>
+        <script>
+        checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel')
+        </script>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="wrap">
+  <p>© 2026 Leer por Sílabas. Contacto: <a data-email href="#">soporte</a></p>
+  <nav><a href="privacidad.html">Política de privacidad</a><a href="terminos.html">Términos de uso</a></nav>
+</footer>
+</body>
+</html>
