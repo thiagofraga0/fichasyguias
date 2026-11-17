@@ -33,7 +33,11 @@ window.SITE = {
   document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('[data-buy]').forEach(function (a) {
       a.href = window.checkoutLink();
-      a.addEventListener('click', function () { window.track('InitiateCheckout', { value: 7, currency: 'USD' }); });
+      // dispara no máximo 1 InitiateCheckout por sessão (evita picos de cliques repetidos/robôs)
+      a.addEventListener('click', function () {
+        try { if (sessionStorage.getItem('ic_sent')) return; sessionStorage.setItem('ic_sent', '1'); } catch (e) {}
+        window.track('InitiateCheckout', { value: 7, currency: 'USD' });
+      });
     });
     document.querySelectorAll('[data-email]').forEach(function (el) {
       el.textContent = S.supportEmail;
