@@ -73,3 +73,7 @@ footer nav { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 8px; }
 @media (prefers-reduced-motion: reduce) { .btn { transition: none; } }
 .stack > .badge, .stack > .btn { justify-self: start; }
 @media (max-width: 520px) { .stack > .btn { justify-self: stretch; } }
+.pay { margin-top: 18px; padding: 14px 16px; border: 1px dashed var(--line); border-radius: 14px; background: var(--sky); text-align: left; }
+.pay-title { margin: 0 0 6px; font-family: var(--display); font-weight: 600; }
+.pay-list { margin: 0 0 6px; padding: 0; list-style: none; font-size: .95rem; }
+.pay-list li { padding: 2px 0; }
