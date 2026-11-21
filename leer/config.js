@@ -33,10 +33,12 @@ window.SITE = {
   document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('[data-buy]').forEach(function (a) {
       a.href = window.checkoutLink();
-      // dispara no máximo 1 InitiateCheckout por sessão (evita picos de cliques repetidos/robôs)
+      // clique no botão de compra = AddToCart (no máx. 1x por sessão).
+      // O InitiateCheckout fica só com o pixel da Hotmart, que dispara quando o checkout abre de verdade
+      // (antes os dois disparavam InitiateCheckout e o Meta contava cada checkout em dobro).
       a.addEventListener('click', function () {
-        try { if (sessionStorage.getItem('ic_sent')) return; sessionStorage.setItem('ic_sent', '1'); } catch (e) {}
-        window.track('InitiateCheckout', { value: 7, currency: 'USD' });
+        try { if (sessionStorage.getItem('atc_sent')) return; sessionStorage.setItem('atc_sent', '1'); } catch (e) {}
+        window.track('AddToCart', { value: 7, currency: 'USD' });
       });
     });
     document.querySelectorAll('[data-email]').forEach(function (el) {
